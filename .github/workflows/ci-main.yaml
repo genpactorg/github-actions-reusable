@@ -21,7 +21,7 @@ jobs:
           elif [ ${{inputs.app_type}} == maven ]; then
             mvn package
           fi
-          # docker build -t 253490775871.dkr.ecr.us-east-1.amazonaws.com/${{inputs.component_name}}:${GITHUB_SHA} .
+          docker build -t 253490775871.dkr.ecr.us-east-1.amazonaws.com/${{inputs.component_name}}:${GITHUB_SHA} .
 
   Docker-Push:
     runs-on: self-hosted
